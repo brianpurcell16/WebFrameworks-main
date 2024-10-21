@@ -1,18 +1,29 @@
 extends layout
 
 block content
-  .wrapper.fadeInDown
-    #formContent
-      // Tabs Titles
-      // Icon
-      .fadeIn.first
-        img#icon(src='http://danielzawadzki.com/codepen/01/icon.svg' alt='User Icon')
-      // Login Form
-      form
-        input#login.fadeIn.second(type='text' name='login' placeholder='login')
-        input#password.fadeIn.third(type='text' name='login' placeholder='password')
-        input.fadeIn.fourth(type='submit' value='Log In')
-      // Remind Passowrd
-      #formFooter
-        a.underlineHover(href='#') Forgot Password?
-  | f
+  
+  #login
+    h3.text-center.text-white.pt-5 Login form
+    .container
+      #login-row.row.justify-content-center.align-items-center
+        #login-column.col-md-6
+          #login-box.col-md-12
+            form#login-form.form(action='' method='post')
+              h3.text-center.text-info Login
+              .form-group
+                label.text-info(for='username') Username:
+                br
+                input#username.form-control(type='text' name='username')
+              .form-group
+                label.text-info(for='password') Password:
+                br
+                input#password.form-control(type='text' name='password')
+              .form-group
+                label.text-info(for='remember-me')
+                  span Remember me
+                  span
+                    input#remember-me(name='remember-me' type='checkbox')
+                br
+                input.btn.btn-info.btn-md(type='submit' name='submit' value='submit')
+              #register-link.text-right
+                a.text-info(href='#') Register here
