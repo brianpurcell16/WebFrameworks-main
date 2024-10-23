@@ -5,6 +5,6 @@ const ctrlMain = require('../controllers/main');
 /* GET home page. */
 router.get('/', ctrlMain.register);
 router.get('/login', ctrlMain.login);
-//router.get('/', ctrlMain.reviews);
+router.get('/review', ctrlMain.review);
 
 module.exports = router;
