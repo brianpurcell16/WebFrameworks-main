@@ -1,2 +1,2 @@
 const mongoose = require('mongoose');
-const Reviews = mongoose.model('Reviews');
+const Register = mongoose.model('Register');

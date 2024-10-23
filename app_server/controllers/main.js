@@ -8,7 +8,8 @@ const login = function(req, res){
 };
 
 const review = function(req, res){
-  res.render('review', { title: 'Reviews' });
+  res.render('review', { 
+  })
 };
 
 module.exports = {
