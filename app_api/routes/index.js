@@ -8,14 +8,15 @@ const ctrlReview = require('../controllers/review');
 
 //register
 router
-.route('/register')
+    .route('/register')
+    .post(ctrlRegister.registerUser);
 
 //login
 router
-.route('/login')
+    .route('/login')
 
 //review
 router
-.route('/review')
+    .route('/review')
 
 module.exports = router;

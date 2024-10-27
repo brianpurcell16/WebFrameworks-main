@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const dbURI =
-"mongodb+srv://brian:brian123@webdatabase.00wzfxg.mongodb.net";
+"mongodb+srv://brian:brian123@webdatabase.jycky.mongodb.net/?retryWrites=true&w=majority&appName=WebDatabase";
 try {
 mongoose.connect(
 dbURI,
