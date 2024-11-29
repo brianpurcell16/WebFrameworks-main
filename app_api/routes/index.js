@@ -1,20 +1,18 @@
-//const apiRoutes = require('../app_api/routes/index');
 
 const express = require('express');
 const router = express.Router();
-const ctrlRegister = require('../controllers/register');
-const ctrlLogin = require('../controllers/login');
+const ctrlAcc = require('../controllers/login');
 const ctrlReview = require('../controllers/review');
 
 //register
 router
-    .route('/register')
-    //.post(ctrlRegister.registerUser);
+    .route('/main/register')
+    .post(ctrlAcc.registerUser);
 
 //login
 router
-    .route('/login')
-    //.post(ctrlLogin.login);
+    .route('/main/login')
+    .post(ctrlAcc.login);
 
 //review
 router
