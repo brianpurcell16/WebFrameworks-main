@@ -32,8 +32,9 @@ const reviews = function (req, res) {
     .json({"status" : "success"});
 };
 
-const _renderReviewpage = function(req, res){
-    res.render('review', {  title: 'Review'
+const _renderReviewpage = function(req, res, responseBody){
+    res.render('review', {  title: 'Review',
+        review: responseBody
     })
     };
     const reviewlist = function(req, res){

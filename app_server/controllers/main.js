@@ -8,7 +8,7 @@ const login = function(req, res){
 };
 
 const reviewlist = function(req, res){
-  const path = '../../app_api/controllers/review.js';
+  const path = '../../app_api/controllers/review';
   const requestOptions = {
   url : apiOptions.server + path,
   method : 'GET',
@@ -18,7 +18,7 @@ const reviewlist = function(req, res){
   };
 
   request(requestOptions, (err, response, body) => {
-    _renderReviewPage(req, res);
+    _renderReviewPage(req, res, body);
     }
     );
     };
