@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Account = mongoose.model('Member');
+const Account = mongoose.model('Users');
 
 const accountsCreate = function (req, res) {
     Account

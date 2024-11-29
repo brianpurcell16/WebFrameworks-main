@@ -4,12 +4,12 @@ const router = express.Router();
 const ctrlAcc = require('../controllers/login');
 const ctrlReview = require('../controllers/review');
 
-//register
+// //register
 router
     .route('/main/register')
     .post(ctrlAcc.accountsCreate);
 
-//login
+// //login
 router
     .route('/main/login')
     .post(ctrlAcc.accountsLogin);

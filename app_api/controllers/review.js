@@ -1,12 +1,11 @@
 const mongoose = require('mongoose');
-const { reviews } = require('../../app_server/controllers/review');
 const Reviews = mongoose.model('Review');
 const reviewsList = function (req, res){
+    console.log("howdy")
     Reviews
         .find()
-        console.log(reviews)
         .then((reviews, err) => {
-            if(!reviews) {
+            if(reviews.length == 0) {
                 res
                     .status(404)
                     .json({
@@ -19,9 +18,9 @@ const reviewsList = function (req, res){
                     .json(err);
                 return;
             }
+            //not finding reviews
             res
             .status(200)
-            console.log(reviews)
             .json(reviews);
         })
 };
