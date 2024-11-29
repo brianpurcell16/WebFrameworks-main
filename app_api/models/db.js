@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+require('./reviews');
 const dbURI =
 "mongodb+srv://brian:brian123@webdatabase.jycky.mongodb.net/?retryWrites=true&w=majority&appName=WebDatabase";
 try {
@@ -12,4 +13,3 @@ err=> {console.log(err)}
 catch (e) {
 console.log("could not connect");
 }
-require('./reviews'); 

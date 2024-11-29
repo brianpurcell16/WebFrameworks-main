@@ -6,6 +6,6 @@ const ctrlData = require('../controllers/review');
 /* GET home page. */
 router.get('/', ctrlMain.register);
 router.get('/login', ctrlMain.login);
-router.get('/review', ctrlData.review);
+router.get('/review', ctrlData.reviews);
 
 module.exports = router;

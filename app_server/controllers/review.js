@@ -9,12 +9,12 @@ if (process.env.NODE_ENV === 'production'){
 const _renderHomepage = function(req, res, responseBody){
     res.render('review', { 
         title: 'review',
-        review: responseBody
+        reviews: responseBody
     });
 }
 
 /* GET home page */
-const review = function(req, res){
+const reviews = function(req, res){
     const path = '/api/reviews';
     const requestOptions = {
         url : apiOptions.server + path,
@@ -27,5 +27,5 @@ const review = function(req, res){
     })
 };
 module.exports = {
-    review
+    reviews
 };
