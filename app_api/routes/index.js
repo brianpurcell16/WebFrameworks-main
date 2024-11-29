@@ -7,16 +7,16 @@ const ctrlReview = require('../controllers/review');
 //register
 router
     .route('/main/register')
-    .post(ctrlAcc.registerUser);
+    .post(ctrlAcc.accountsCreate);
 
 //login
 router
     .route('/main/login')
-    .post(ctrlAcc.login);
+    .post(ctrlAcc.accountsLogin);
 
 //review
 router
     .route('/review')
-    .get(ctrlReview.reviews)
+    .get(ctrlReview.reviewsList)
 
 module.exports = router;
