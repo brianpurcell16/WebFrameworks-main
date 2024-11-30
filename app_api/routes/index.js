@@ -17,6 +17,6 @@ router
 //review
 router
     .route('/review')
-    .get(ctrlReview.reviewsList)
+    .get(ctrlReview.reviewsList);
 
 module.exports = router;

@@ -15,7 +15,7 @@ const _renderHomepage = function(req, res, responseBody){
 
 /* GET home page */
 const reviews = function(req, res){
-    const path = '/api/reviews';
+    const path = '/api/review';
     const requestOptions = {
         url : apiOptions.server + path,
         method: 'GET',
@@ -23,9 +23,15 @@ const reviews = function(req, res){
         qs : {}
     };
     request(requestOptions, (err, response, body) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ error: 'Internal Server Error' });
+        }
         _renderHomepage(req, res, body);
-    })
+    });
 };
+
+
 module.exports = {
     reviews
 };

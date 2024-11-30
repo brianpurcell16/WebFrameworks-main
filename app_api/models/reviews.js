@@ -14,7 +14,6 @@ const reviewSchema = new mongoose.Schema({
     rating: Number
 });
 
-
 mongoose.model('Users',memberSchema);
-mongoose.model('Review',reviewSchema);
+mongoose.model('Reviews',reviewSchema);
 

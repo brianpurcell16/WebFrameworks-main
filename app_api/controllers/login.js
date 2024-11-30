@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Account = mongoose.model('Users');
+const Reviews = mongoose.model('Reviews');
 
 const accountsCreate = function (req, res) {
     Account
@@ -56,6 +57,6 @@ const accountsLogin = function(req, res) {
 
 
 module.exports = {
-   accountsCreate,
+    accountsCreate,
     accountsLogin
     };
