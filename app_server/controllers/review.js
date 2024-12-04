@@ -33,5 +33,6 @@ const reviews = function(req, res){
 
 
 module.exports = {
-    reviews
+    reviews,
+    _renderHomepage
 };

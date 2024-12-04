@@ -5,10 +5,9 @@ const Account = mongoose.model('Users');
 const reviewsList = function (req,res) {
     console.log("Fetching reviews...");
 
-    Reviews
-        .find()
-        .exec()
-        .then((reviews) => {
+    Reviews.find()
+            .then((reviews) => {
+            console.log(reviews)
             if (reviews.length === 0) {
                 res.status(404).json({ "message": "No reviews available" });
                 return;

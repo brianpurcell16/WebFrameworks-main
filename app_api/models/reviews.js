@@ -14,6 +14,12 @@ const reviewSchema = new mongoose.Schema({
     rating: Number
 });
 
-mongoose.model('Users',memberSchema);
-mongoose.model('Reviews',reviewSchema);
+const Users = mongoose.model('Users',memberSchema);
+const Reviews = mongoose.model('Reviews',reviewSchema,'reviews' );
+
+module.export = {
+    Users,
+    Reviews
+};
+
 

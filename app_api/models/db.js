@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 require('./reviews');
 const dbURI =
-"mongodb+srv://Bri:Bri@webdatabase.jycky.mongodb.net/?retryWrites=true&w=majority&appName=WebDatabase";
+"mongodb+srv://bri2:bri2@webdatabase.jycky.mongodb.net/MovieReviews?retryWrites=true&w=majority&appName=WebDatabase";
 try {
 mongoose.connect(
 dbURI,
