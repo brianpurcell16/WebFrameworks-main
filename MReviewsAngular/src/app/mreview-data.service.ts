@@ -9,16 +9,20 @@ export class MReviewDataService {
 
   constructor(private http: HttpClient) { }
 
-  private apiBaseUrl = 'https://localhost:3000/api/';
+  private apiBaseUrl = 'https://localhost:3000/api';
 
   public getReviews(): Promise<Review[]> {
 
     const url: string =
           `${this.apiBaseUrl}/review `;
+          console.log('Requesting reviews from:', url);
           return this.http
           .get(url)
           .toPromise()
-          .then(response => response as Review[])
+          .then(response => {
+            console.log('Received response:', response);  // Log the response
+            return response as Review[];
+          })
           .catch(this.handleError);
         }
         private handleError(error: any): Promise<any> {

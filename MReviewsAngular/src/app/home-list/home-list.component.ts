@@ -22,14 +22,14 @@ export class Review{
 export class HomeListComponent implements OnInit {
   constructor(private MReviewDataService: MReviewDataService) { }
 
-  Reviews!: Review [];
+  reviews: Review [] = [];
 
 
   private getReviews(): void {
     this.MReviewDataService
     .getReviews()
     .then(foundReviews => {
-    this.Reviews = foundReviews;
+    this.reviews = foundReviews;
     });
     }
 

@@ -1,24 +1,24 @@
 <div class="container" >
     <h1>Movie Reviews</h1>
-    <div class="card" *ngFor="let Review of Reviews"></div>
-    <div class="row-fluid">
+    <div class="card" ></div>
+    <div class="row-fluid" *ngFor="let review of reviews">
         <div class="col-sm-6"></div>
         <div class="panel panel-default">
             <div class="panel-heading">
 
             </div><span itemscope="" itemtype="http://schema.org/Review">
-                <h3 class="panel-title" itemprop="name">Movie Name: {{Review.movieName}}</h3>
+                <h3 class="panel-title" itemprop="name">Movie Name: {{review.movieName}}</h3>
             </span><!-- /panel-heading--><div class="panel-body" itemprop="reviewBody">
 
-            </div>Review:<h4>{{Review.review}}</h4>
+            </div>Review:<h4>{{review.review}}</h4>
             <span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
                 <small></small>
-                <span itemprop="name">Reviewer Name: {{Review.reviewer}} </span><br></span>
+                <span itemprop="name">Reviewer Name: {{review.reviewer}} </span><br></span>
                 <!-- /author schema--><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-                 <meta itemprop="datePublished" content="01-01-2016"> Date: {{Review.date}} <br><span>
+                 <meta itemprop="datePublished" content="01-01-2016"> Date: {{review.date}} <br><span>
                     <span class="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
 
-                    </span><meta itemprop="worstRating" content="1"><span itemprop="ratingValue"> Rating: {{Review.rating}}</span>
+                    </span><meta itemprop="worstRating" content="1"><span itemprop="ratingValue"> Rating: {{review.rating}}</span>
                     <span itemprop="bestRating"> stars </span>
                     <!-- /reviewRating--><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
