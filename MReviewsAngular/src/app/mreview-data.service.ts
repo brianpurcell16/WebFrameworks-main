@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Review } from './home-list/home-list.component';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,26 +10,16 @@ export class MReviewDataService {
 
   constructor(private http: HttpClient) { }
 
-  private apiBaseUrl = 'https://localhost:3000/api';
+  private apiBaseUrl = 'http://localhost:3000/api';
 
-  public getReviews(): Promise<Review[]> {
+  public getReviews(): Observable<Review[]> {
 
-    const url: string =
-          `${this.apiBaseUrl}/review `;
-          console.log('Requesting reviews from:', url);
-          return this.http
-          .get(url)
-          .toPromise()
-          .then(response => {
-            console.log('Received response:', response);  // Log the response
-            return response as Review[];
-          })
-          .catch(this.handleError);
-        }
-        private handleError(error: any): Promise<any> {
-          console.error('Something has gone wrong', error);
-          return Promise.reject(error.message || error);
-        }
-    
+    const url: string = `${this.apiBaseUrl}/review`;
+    console.log('Requesting reviews from:', url);
+    return this.http.get<Review[]>(url);
+     
+  }
+
+  
     }
 

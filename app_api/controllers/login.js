@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 const Account = mongoose.model('Users');
 const Reviews = mongoose.model('Reviews');
+var passport = require('passport');
 
 const accountsCreate = function (req, res) {
     Account
         .create({
             username: req.body.username,
-            email: req.body.email,
             password: req.body.password
         })
         .then ((err, account) => {

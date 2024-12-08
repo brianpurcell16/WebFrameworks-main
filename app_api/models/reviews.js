@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
+var passportLocalMongoose = require('passport-local-mongoose');
 
 const memberSchema = new mongoose.Schema({ 
     username: String,
-    email: String,
     password: String
 });
 
@@ -14,7 +14,7 @@ const reviewSchema = new mongoose.Schema({
     rating: Number
 });
 
-const Users = mongoose.model('Users',memberSchema);
+const Users = mongoose.model('Users',memberSchema, 'Users');
 const Reviews = mongoose.model('Reviews',reviewSchema,'reviews' );
 
 module.export = {

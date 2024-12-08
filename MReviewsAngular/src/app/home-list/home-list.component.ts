@@ -19,7 +19,7 @@ export class Review{
   providers: [MReviewDataService]
 })
 
-export class HomeListComponent implements OnInit {
+export class HomeListComponent{
   constructor(private MReviewDataService: MReviewDataService) { }
 
   reviews: Review [] = [];
@@ -28,9 +28,10 @@ export class HomeListComponent implements OnInit {
   private getReviews(): void {
     this.MReviewDataService
     .getReviews()
-    .then(foundReviews => {
-    this.reviews = foundReviews;
-    });
+    .subscribe({
+      next: foundReviews => {
+      this.reviews = foundReviews;
+    }});
     }
 
   ngOnInit() { 
